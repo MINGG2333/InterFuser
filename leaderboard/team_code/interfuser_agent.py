@@ -13,15 +13,15 @@ import carla
 import numpy as np
 from PIL import Image
 from easydict import EasyDict
+from team_code.planner import RoutePlanner
 
 from torchvision import transforms
 from leaderboard.autoagents import autonomous_agent
 from timm.models import create_model
-from team_code.utils import lidar_to_histogram_features, transform_2d_points
-from team_code.planner import RoutePlanner
-from team_code.interfuser_controller import InterfuserController
-from team_code.render import render, render_self_car, render_waypoints
-from team_code.tracker import Tracker
+from interfuser_team_code.utils import lidar_to_histogram_features, transform_2d_points
+from interfuser_team_code.interfuser_controller import InterfuserController
+from interfuser_team_code.render import render, render_self_car, render_waypoints
+from interfuser_team_code.tracker import Tracker
 
 import math
 import yaml

@@ -179,7 +179,7 @@ CUDA_VISIBLE_DEVICES=0 ./leaderboard/scripts/run_evaluation.sh
 Use `ROUTES=leaderboard/data/42routes/42routes.xml` and `SCENARIOS=leaderboard/data/42routes/42scenarios.json` to run CARLA 42 routes Benchmark.
 
 ### Pretrain weights
-We also provide examplery model weights for direct evaluation which can be downloaded at [here](http://43.159.60.142/s/p2CN). The model needs to be moved to `leaderboard/team_code/`.
+We also provide examplery model weights for direct evaluation which can be downloaded at [here](http://43.159.60.142/s/p2CN). The model needs to be moved as `model_ckpt/interfuser.pth.tar` (specified by `leaderboard/team_code/interfuser_config.py`).
 
 **Note:** The model is trained on the part of the full dataset with several towns and weathers.
 

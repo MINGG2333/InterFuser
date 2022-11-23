@@ -1,6 +1,6 @@
 import numpy as np
 from collections import deque
-from team_code.render import render, render_self_car, find_peak_box
+from interfuser_team_code.render import render, render_self_car, find_peak_box
 
 class PIDController(object):
     def __init__(self, K_P=1.0, K_I=0.0, K_D=0.0, n=20):
@@ -270,4 +270,17 @@ class InterfuserController(object):
             throttle = 0
             brake = True
 
-        return steer, throttle, brake, (meta_info_1, meta_info_2, meta_info_3, safe_dis)
+        metadata = {
+            'speed': float(speed.astype(np.float64)),
+            'steer': float(steer),
+            'throttle': float(throttle),
+            'brake': float(brake),
+            'wp_2': tuple(waypoints[1].astype(np.float64)),
+            'wp_1': tuple(waypoints[0].astype(np.float64)),
+            'desired_speed': float(desired_speed),
+            'angle': float(angle),
+            'aim': tuple(aim.astype(np.float64)),
+            'delta': float(delta.astype(np.float64)),
+        }
+
+        return steer, throttle, brake, (meta_info_1, meta_info_2, meta_info_3, safe_dis), metadata, waypoints

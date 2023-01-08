@@ -639,7 +639,7 @@ class AgentSaver(Saver):
         self.config_path = path_to_conf_file
 
         # jxy: according to sensor
-        self.rgb_list = ['rgb_raw', 'rgb_left_raw', 'rgb_right_raw', 'topdown', ] # 'bev', 
+        self.rgb_list = ['rgb_raw', 'topdown', ] # 'rgb_left_raw', 'rgb_right_raw', 'bev', 
         self.add_img = [] # 'flow', 'out', 
         self.lidar_list = [] # 'lidar_0', 'lidar_1',
         self.dir_names = self.rgb_list + self.add_img + self.lidar_list + ['pid_metadata']

@@ -32,7 +32,7 @@ except ImportError:
     raise RuntimeError("cannot import pygame, make sure pygame package is installed")
 
 
-SAVE_PATH = os.environ.get("SAVE_PATH", 'eval')
+SAVE_PATH = os.environ.get("SAVE_PATH", None)
 IMAGENET_DEFAULT_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_DEFAULT_STD = (0.229, 0.224, 0.225)
 

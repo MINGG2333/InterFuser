@@ -22,7 +22,8 @@ class GlobalConfig:
 
     max_speed = 5
     collision_buffer = [2.5, 1.2]
-    model_path = "leaderboard/team_code/interfuser.pth.tar"
+    here = os.path.abspath(os.path.dirname(__file__))
+    model_path = os.path.join(here, "interfuser.pth.tar")
     momentum = 0
     skip_frames = 1
     detect_threshold = 0.04

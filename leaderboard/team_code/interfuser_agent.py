@@ -17,11 +17,11 @@ from easydict import EasyDict
 from torchvision import transforms
 from leaderboard.autoagents import autonomous_agent
 from timm.models import create_model
-from team_code.utils import lidar_to_histogram_features, transform_2d_points
-from team_code.planner import RoutePlanner
-from team_code.interfuser_controller import InterfuserController
-from team_code.render import render, render_self_car, render_waypoints
-from team_code.tracker import Tracker
+from utils import lidar_to_histogram_features, transform_2d_points
+from planner import RoutePlanner
+from interfuser_controller import InterfuserController
+from render import render, render_self_car, render_waypoints
+from tracker import Tracker
 
 import math
 import yaml
